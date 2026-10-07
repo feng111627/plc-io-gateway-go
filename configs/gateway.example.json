@@ -1,0 +1,16 @@
+{
+  "readTimeout": 200,
+  "maxAge": 1500,
+  "writeMaxAttempts": 3,
+  "writeRetryDelay": 50,
+  "devices": [
+    { "id": "line-a", "readDelay": 5, "writeDelay": 2, "safeState": "hold", "initOnline": true },
+    { "id": "line-b", "readDelay": 8, "writeDelay": 2, "safeState": "hold", "initOnline": true }
+  ],
+  "points": [
+    { "id": "a.temp",     "device": "line-a", "address": "40001", "type": "float", "readOnly": true,  "min": -40, "max": 120 },
+    { "id": "a.speed",    "device": "line-a", "address": "40002", "type": "int",   "readOnly": false, "min": 0,   "max": 3000 },
+    { "id": "b.pressure", "device": "line-b", "address": "40010", "type": "float", "readOnly": false, "min": 0,   "max": 10 },
+    { "id": "b.motor",    "device": "line-b", "address": "00001", "type": "bool",  "readOnly": false, "min": 0,   "max": 1 }
+  ]
+}
